@@ -1,0 +1,47 @@
+login com sucesso
+    Dado que eu acesso a página de login
+    Quando eu submeto minhas credenciais "sapphire@ninjapixel.com" e "pwd123"
+    Então devo ser autenticado
+
+Senha incorreta
+    Dado que eu acesso a página de login
+    Quando eu submeto minhas credenciais com senha incorreta
+    Então devo ver uma mensagem de alerta "Usuário e/ou senha inválidos."
+
+Email nao cadastrado
+    Dado que eu acesso a página de login
+    Quando eu submeto minhas credenciais com email nao cadastrado
+    Então devo ver uma mensagem de alerta "Usuário e/ou senha inválidos."
+
+Email nao informado
+    Dado que eu acesso a página de login
+    Quando eu submeto minhas credenciais sem o email
+    Então devo ver uma mensagem de alerta "Opps. Informe o seu email!"
+
+Email nao informado
+    Dado que eu acesso a página de login
+    Quando eu submeto minhas credenciais sem a senha
+    Então devo ver uma mensagem de alerta "Opps. Informe o sua senha!"
+
+    ### Desafio 
+#Dado que eu acesso a página de login
+ #   Open Browser        http://pixel-web:3000/login     chrome
+
+#Quando eu submeto minhas credenciais com senha incorreta
+ #   Input Text      id:emailId      ${email}
+ #   Input Text      id:passId       1234
+  #  Click Element   class:btn
+
+#Entao devo ver uma mensagem de alerta "Usuário e/ou senha inválidos"
+ #   Wait Until Page Contains        Opps. Informe o sua senha!
+  #  Close Browser
+
+
+#Senha nao informada
+ #   Dado que eu acesso a página de login
+  #  Quando eu submeto minhas credenciais sem a senha
+   # Então devo ver uma mensagem de alerta "Opps. Informe o sua senha!"
+
+# ATDD (Desenvolvimento guiado por testes de aceitação)
+# ATDD 
+# Gherckin = BDD (Desenvolvimento guiado à comportamento)

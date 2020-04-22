@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.8.2 on darwin)" generated="20200422 16:20:41.006" rpa="false">
+<suite id="s1" name="Login" source="/Users/gabrielaambos/qaninja/ninjapixel/tests/login.robot">
+<test id="s1-t1" name="Login com sucesso">
+<kw name="Dado que eu acesso a página de login">
+<kw name="Open Browser">
+<arguments>
+<arg>http://pixel-web:3000/login</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20200422 16:20:41.053" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<status status="FAIL" starttime="20200422 16:20:41.053" endtime="20200422 16:20:41.054"></status>
+</kw>
+<status status="FAIL" starttime="20200422 16:20:41.052" endtime="20200422 16:20:41.054"></status>
+</kw>
+<status status="FAIL" starttime="20200422 16:20:41.051" endtime="20200422 16:20:41.054" critical="yes">No keyword with name 'Open Browser' found.</status>
+</test>
+<test id="s1-t2" name="Senha incorreta">
+<kw name="Dado que eu acesso a página de login">
+<kw name="Open Browser">
+<arguments>
+<arg>http://pixel-web:3000/login</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20200422 16:20:41.056" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<status status="FAIL" starttime="20200422 16:20:41.056" endtime="20200422 16:20:41.057"></status>
+</kw>
+<status status="FAIL" starttime="20200422 16:20:41.055" endtime="20200422 16:20:41.057"></status>
+</kw>
+<status status="FAIL" starttime="20200422 16:20:41.054" endtime="20200422 16:20:41.057" critical="yes">No keyword with name 'Open Browser' found.</status>
+</test>
+<status status="FAIL" starttime="20200422 16:20:41.009" endtime="20200422 16:20:41.057"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2">Critical Tests</stat>
+<stat pass="0" fail="2">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="2" id="s1" name="Login">Login</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20200422 16:20:40.994" level="ERROR">Error in file '/Users/gabrielaambos/qaninja/ninjapixel/tests/login.robot': Setting 'Documentation' used multiple times.</msg>
+<msg timestamp="20200422 16:20:41.049" level="ERROR">Error in file '/Users/gabrielaambos/qaninja/ninjapixel/tests/login.robot': Importing test library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'SeleniumLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  /Library/Frameworks/Python.framework/Versions/3.8/bin
+  /Library/Frameworks/Python.framework/Versions/3.8/lib/python38.zip
+  /Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8
+  /Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/lib-dynload
+  /Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages</msg>
+<msg timestamp="20200422 16:20:41.050" level="ERROR">Error in file '/Users/gabrielaambos/qaninja/ninjapixel/tests/login.robot': Importing test library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'SeleniumLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  /Library/Frameworks/Python.framework/Versions/3.8/bin
+  /Library/Frameworks/Python.framework/Versions/3.8/lib/python38.zip
+  /Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8
+  /Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/lib-dynload
+  /Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages</msg>
+</errors>
+</robot>
