@@ -1,3 +1,0 @@
-# ATDD (Desenvolvimento guiado por testes de aceitação)
-# ATDD 
-# Gherckin = BDD (Desenvolvimento guiado à comportamento)
