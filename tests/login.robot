@@ -4,37 +4,32 @@ Documentation       Login
 ...     Quero me autenticar no sistema 
 ...     Para que eu possa gerenciar os meus produtos
 
-Library  SeleniumLibrary
+Resource     ../resources/actions.robot
+Test Teardown   BasePage.Close
 
 *** Test Cases ***
 Login com sucesso
     Dado que eu acesso a página de login
     Quando eu submeto minhas credenciais "sapphire@ninjapixel.com" e "pwd123"
-    Entao devo ser autenticado
+    Então devo ser autenticado
 
 Senha incorreta
     Dado que eu acesso a página de login
-    Quando eu submeto minhas credenciais com senha incorreta
-    Entao devo ver uma mensagem de alerta "Usuário e/ou senha inválidos"
+    Quando eu submeto minhas credenciais "sapphire@ninjapixel.com" e "123abc"
+    Então devo ver uma mensagem de alerta "Usuário e/ou senha inválidos"
 
-*** Keywords ***
-Dado que eu acesso a página de login
-    Open Browser    http://pixel-web:3000/login     safari
+Email nao cadastrado
+    Dado que eu acesso a página de login
+    Quando eu submeto minhas credenciais "fakeemail@ninjapixel.com" e "pwd123"
+    Então devo ver uma mensagem de alerta "Usuário e/ou senha inválidos"
 
-Quando eu submeto minhas credenciais "${email}" e "${pass}"
-    Input Text      id:emailId      ${email}
-    Input Text      id:passId       ${pass}
-    Click Element   class:btn
+Email obrigatório
+    Dado que eu acesso a página de login
+    Quando eu submeto minhas credenciais "${EMPTY}" e "pwd123"
+    Então devo ver uma mensagem de alerta "Opps. Informe o seu email!"
 
-Entao devo ser autenticado
-    Wait Until Page Contains    Sapphire
-    Close Browser
+Senha nao informado
+    Dado que eu acesso a página de login
+    Quando eu submeto minhas credenciais "sapphire@ninjapixel.com" e "${EMPTY}"
+    Então devo ver uma mensagem de alerta "Opps. Informe a sua senha!"
 
-Quando eu submeto minhas credenciais com senha incorreta
-    Input Text      id:emailId      sapphire@ninjapixel.com
-    Input Text      id:passId       123456
-    Click Element   class:btn
-
-Entao devo ver uma mensagem de alerta "${message}"
-    Wait Until Page Contains    ${message}
-    Close Browser
